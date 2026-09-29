@@ -1,0 +1,34 @@
+---
+title: FilterToggle
+group: Forms
+description: Funnel button that opens a filter panel and shows the active count.
+registry: filter-toggle
+---
+
+## Install
+
+```sh
+npx shadcn@latest add @atlas/filter-toggle
+```
+
+## Usage
+
+```tsx
+import { FilterToggle } from "@/components/ui/filter-toggle"
+
+<FilterToggle count={2} open={open} onToggle={() => setOpen(o => !o)} controls="filters" />
+```
+
+## Props
+
+| Prop | Type | Default | Notes |
+|---|---|---|---|
+| `count` | `number` | 0 | > 0 → solid active state (no hover). |
+| `open` | `boolean` | false | aria-expanded. |
+| `onToggle` | `() => void` | — |  |
+| `controls` | `string` | — | aria-controls id. |
+
+## Accessibility
+
+- aria-label includes the count.
+- 44px on mobile, 36px from sm.

@@ -1,0 +1,32 @@
+---
+title: StatusBadge
+group: Feedback
+description: Semantic status label. Never color-only.
+registry: status-badge
+---
+
+## Install
+
+```sh
+npx shadcn@latest add @atlas/status-badge
+```
+
+## Usage
+
+```tsx
+import { StatusBadge } from "@/components/ui/status-badge"
+
+<StatusBadge tone="positive" dot>Verified</StatusBadge>
+<StatusBadge tone="strong">Top pick</StatusBadge>
+```
+
+## Props
+
+| Prop | Type | Default | Notes |
+|---|---|---|---|
+| `tone` | `'neutral' | 'positive' | 'strong' | 'warning' | 'danger'` | 'neutral' | strong = solid accent, one per surface. |
+| `dot` | `boolean` | false | Redundant reinforcement only. |
+
+## Accessibility
+
+- Text always present; the dot is decorative.

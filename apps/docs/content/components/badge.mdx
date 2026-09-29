@@ -1,0 +1,32 @@
+---
+title: Badge
+group: Identity
+description: Small inline label. Use StatusBadge for semantic status.
+registry: badge
+---
+
+## Install
+
+```sh
+npx shadcn@latest add @atlas/badge
+```
+
+## Usage
+
+```tsx
+import { Badge } from "@/components/ui/badge"
+
+<Badge>New</Badge>
+<Badge variant="outline">Verified</Badge>
+```
+
+## Props
+
+| Prop | Type | Default | Notes |
+|---|---|---|---|
+| `variant` | `'default' | 'secondary' | 'destructive' | 'outline' | 'ghost' | 'link'` | 'default' |  |
+| `render` | `ReactElement` | span | Base UI render prop, e.g. render={<a href=… />}. |
+
+## Accessibility
+
+- 20px tall, decorative: pair with visible text when it carries meaning.

@@ -1,0 +1,32 @@
+---
+title: Input
+group: Forms
+description: Text input on atlas tokens. Focus is the global ring; the border never changes on focus.
+registry: input
+---
+
+## Install
+
+```sh
+npx shadcn@latest add @atlas/input
+```
+
+## Usage
+
+```tsx
+import { Input } from "@/components/ui/input"
+
+<Input type="email" placeholder="you@example.com" />
+```
+
+## Props
+
+| Prop | Type | Default | Notes |
+|---|---|---|---|
+| `type` | `string` | text | email/number/tel/url infer inputMode. |
+| `…props` | `ComponentProps<'input'>` |  |  |
+
+## Accessibility
+
+- 44px tall on mobile.
+- aria-invalid → danger border; pair with a visible error message.

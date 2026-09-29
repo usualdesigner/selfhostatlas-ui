@@ -68,7 +68,8 @@
         "@atlas/utils"
       ],
       "dependencies": [
-        "@radix-ui/react-slot"
+        "@base-ui/react",
+        "class-variance-authority"
       ],
       "files": [
         {
@@ -89,6 +90,10 @@
           "path": "ui/badge.tsx",
           "type": "registry:ui"
         }
+      ],
+      "dependencies": [
+        "@base-ui/react",
+        "class-variance-authority"
       ]
     },
     {
@@ -103,6 +108,9 @@
           "path": "ui/input.tsx",
           "type": "registry:ui"
         }
+      ],
+      "dependencies": [
+        "@base-ui/react"
       ]
     },
     {
@@ -288,6 +296,9 @@
           "path": "components/card-shell.tsx",
           "type": "registry:component"
         }
+      ],
+      "dependencies": [
+        "next"
       ]
     },
     {
@@ -308,7 +319,8 @@
       "name": "status-badge",
       "type": "registry:component",
       "registryDependencies": [
-        "@atlas/badge"
+        "@atlas/style",
+        "@atlas/utils"
       ],
       "files": [
         {
@@ -343,13 +355,17 @@
           "path": "components/filter-toggle.tsx",
           "type": "registry:component"
         }
+      ],
+      "dependencies": [
+        "lucide-react"
       ]
     },
     {
       "name": "rating-dots",
       "type": "registry:component",
       "registryDependencies": [
-        "@atlas/style"
+        "@atlas/style",
+        "@atlas/utils"
       ],
       "files": [
         {
@@ -362,7 +378,8 @@
       "name": "tag-list",
       "type": "registry:component",
       "registryDependencies": [
-        "@atlas/style"
+        "@atlas/style",
+        "@atlas/utils"
       ],
       "files": [
         {

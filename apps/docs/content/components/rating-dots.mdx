@@ -1,0 +1,35 @@
+---
+title: RatingDots
+group: Data
+description: Ordinal dot meter. Amber for effort, green for quality.
+registry: rating-dots
+---
+
+## Install
+
+```sh
+npx shadcn@latest add @atlas/rating-dots
+```
+
+## Usage
+
+```tsx
+import { RatingDots } from "@/components/ui/rating-dots"
+
+<RatingDots value={3} name="Difficulty" />
+<RatingDots value={2} max={3} tone="accent" showLabel={false} />
+```
+
+## Props
+
+| Prop | Type | Default | Notes |
+|---|---|---|---|
+| `value` | `number` | — | Clamped 0..max. |
+| `max` | `number` | 5 |  |
+| `tone` | `'caution' | 'accent'` | 'caution' |  |
+| `name` | `string` | 'Rating' | Screen-reader noun. |
+| `showLabel` | `boolean` | true | Mono "n / max". |
+
+## Accessibility
+
+- role=img with "{name} {n} out of {max}"; dots and label are aria-hidden.

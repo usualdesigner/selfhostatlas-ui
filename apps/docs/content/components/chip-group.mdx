@@ -1,0 +1,36 @@
+---
+title: ChipGroup
+group: Forms
+description: Labelled group of pressable filter pills.
+registry: chip-group
+---
+
+## Install
+
+```sh
+npx shadcn@latest add @atlas/chip-group
+```
+
+## Usage
+
+```tsx
+import { ChipGroup } from "@/components/ui/chip-group"
+
+<ChipGroup label="Stack" chips={[
+  { label: "All", pressed: stack === null, onClick: () => setStack(null) },
+  { label: "Docker", pressed: stack === "docker", onClick: () => setStack("docker") },
+]} />
+```
+
+## Props
+
+| Prop | Type | Default | Notes |
+|---|---|---|---|
+| `label` | `string` | — | Visible and used as the group name. |
+| `chips` | `Chip[]` | — | { label, pressed, onClick }. |
+| `layout` | `'inline' | 'stack'` | 'inline' |  |
+
+## Accessibility
+
+- aria-pressed on each chip; role=group labelled by the facet.
+- 32px pills: the documented exception to the 44px touch rule.

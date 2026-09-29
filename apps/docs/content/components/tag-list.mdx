@@ -1,0 +1,30 @@
+---
+title: TagList
+group: Identity
+description: Mono tag row for stacks, tech, categories.
+registry: tag-list
+---
+
+## Install
+
+```sh
+npx shadcn@latest add @atlas/tag-list
+```
+
+## Usage
+
+```tsx
+import { TagList } from "@/components/ui/tag-list"
+
+<TagList tags={["Docker", "Postgres", "Node"]} />
+```
+
+## Props
+
+| Prop | Type | Default | Notes |
+|---|---|---|---|
+| `tags` | `string[]` | — | Renders nothing when empty. |
+
+## Accessibility
+
+- Plain text; no interaction.
