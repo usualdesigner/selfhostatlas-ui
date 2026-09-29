@@ -1,0 +1,627 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry.json",
+  "name": "atlas",
+  "homepage": "https://usualdesigner.github.io/selfhostatlas-ui",
+  "items": [
+    {
+      "name": "style",
+      "type": "registry:style",
+      "extends": "none",
+      "files": [
+        {
+          "path": "styles/engineers-reference.css",
+          "type": "registry:style"
+        }
+      ],
+      "dependencies": [
+        "class-variance-authority",
+        "clsx",
+        "tailwind-merge",
+        "@fontsource-variable/ibm-plex-sans",
+        "@fontsource/ibm-plex-mono"
+      ],
+      "cssVars": {
+        "theme": {
+          "font-sans": "IBM Plex Sans, ui-sans-serif, system-ui, sans-serif",
+          "font-mono": "IBM Plex Mono, ui-monospace, monospace"
+        }
+      }
+    },
+    {
+      "name": "utils",
+      "type": "registry:lib",
+      "files": [
+        {
+          "path": "lib/cn.ts",
+          "type": "registry:lib"
+        }
+      ]
+    },
+    {
+      "name": "shiki-theme",
+      "type": "registry:lib",
+      "files": [
+        {
+          "path": "lib/shiki-theme.ts",
+          "type": "registry:lib"
+        }
+      ],
+      "dependencies": [
+        "shiki"
+      ]
+    },
+    {
+      "name": "use-theme",
+      "type": "registry:hook",
+      "files": [
+        {
+          "path": "hooks/use-theme.ts",
+          "type": "registry:hook"
+        }
+      ]
+    },
+    {
+      "name": "button",
+      "type": "registry:ui",
+      "registryDependencies": [
+        "@atlas/style",
+        "@atlas/utils"
+      ],
+      "dependencies": [
+        "@radix-ui/react-slot"
+      ],
+      "files": [
+        {
+          "path": "ui/button.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "badge",
+      "type": "registry:ui",
+      "registryDependencies": [
+        "@atlas/style",
+        "@atlas/utils"
+      ],
+      "files": [
+        {
+          "path": "ui/badge.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "input",
+      "type": "registry:ui",
+      "registryDependencies": [
+        "@atlas/style",
+        "@atlas/utils"
+      ],
+      "files": [
+        {
+          "path": "ui/input.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "textarea",
+      "type": "registry:ui",
+      "registryDependencies": [
+        "@atlas/style",
+        "@atlas/utils"
+      ],
+      "files": [
+        {
+          "path": "ui/textarea.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "select",
+      "type": "registry:ui",
+      "registryDependencies": [
+        "@atlas/style",
+        "@atlas/utils"
+      ],
+      "dependencies": [
+        "@radix-ui/react-select"
+      ],
+      "files": [
+        {
+          "path": "ui/select.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "checkbox",
+      "type": "registry:ui",
+      "registryDependencies": [
+        "@atlas/style",
+        "@atlas/utils"
+      ],
+      "dependencies": [
+        "@radix-ui/react-checkbox"
+      ],
+      "files": [
+        {
+          "path": "ui/checkbox.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "radio-group",
+      "type": "registry:ui",
+      "registryDependencies": [
+        "@atlas/style",
+        "@atlas/utils"
+      ],
+      "dependencies": [
+        "@radix-ui/react-radio-group"
+      ],
+      "files": [
+        {
+          "path": "ui/radio-group.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "field",
+      "type": "registry:ui",
+      "registryDependencies": [
+        "@atlas/style",
+        "@atlas/utils"
+      ],
+      "files": [
+        {
+          "path": "ui/field.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "input-group",
+      "type": "registry:ui",
+      "registryDependencies": [
+        "@atlas/style",
+        "@atlas/input"
+      ],
+      "files": [
+        {
+          "path": "ui/input-group.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "dialog",
+      "type": "registry:ui",
+      "registryDependencies": [
+        "@atlas/style",
+        "@atlas/utils"
+      ],
+      "dependencies": [
+        "@radix-ui/react-dialog"
+      ],
+      "files": [
+        {
+          "path": "ui/dialog.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "dropdown-menu",
+      "type": "registry:ui",
+      "registryDependencies": [
+        "@atlas/style",
+        "@atlas/utils"
+      ],
+      "dependencies": [
+        "@radix-ui/react-dropdown-menu"
+      ],
+      "files": [
+        {
+          "path": "ui/dropdown-menu.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "command",
+      "type": "registry:ui",
+      "registryDependencies": [
+        "@atlas/style",
+        "@atlas/dialog"
+      ],
+      "dependencies": [
+        "cmdk"
+      ],
+      "files": [
+        {
+          "path": "ui/command.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "separator",
+      "type": "registry:ui",
+      "registryDependencies": [
+        "@atlas/style"
+      ],
+      "files": [
+        {
+          "path": "ui/separator.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "callout",
+      "type": "registry:component",
+      "registryDependencies": [
+        "@atlas/style",
+        "@atlas/utils"
+      ],
+      "files": [
+        {
+          "path": "components/callout.tsx",
+          "type": "registry:component"
+        }
+      ]
+    },
+    {
+      "name": "card-shell",
+      "type": "registry:component",
+      "registryDependencies": [
+        "@atlas/style",
+        "@atlas/utils"
+      ],
+      "files": [
+        {
+          "path": "components/card-shell.tsx",
+          "type": "registry:component"
+        }
+      ]
+    },
+    {
+      "name": "type-tile",
+      "type": "registry:component",
+      "registryDependencies": [
+        "@atlas/style",
+        "@atlas/utils"
+      ],
+      "files": [
+        {
+          "path": "components/type-tile.tsx",
+          "type": "registry:component"
+        }
+      ]
+    },
+    {
+      "name": "status-badge",
+      "type": "registry:component",
+      "registryDependencies": [
+        "@atlas/badge"
+      ],
+      "files": [
+        {
+          "path": "components/status-badge.tsx",
+          "type": "registry:component"
+        }
+      ]
+    },
+    {
+      "name": "chip-group",
+      "type": "registry:component",
+      "registryDependencies": [
+        "@atlas/style",
+        "@atlas/utils"
+      ],
+      "files": [
+        {
+          "path": "components/chip-group.tsx",
+          "type": "registry:component"
+        }
+      ]
+    },
+    {
+      "name": "filter-toggle",
+      "type": "registry:component",
+      "registryDependencies": [
+        "@atlas/style",
+        "@atlas/utils"
+      ],
+      "files": [
+        {
+          "path": "components/filter-toggle.tsx",
+          "type": "registry:component"
+        }
+      ]
+    },
+    {
+      "name": "rating-dots",
+      "type": "registry:component",
+      "registryDependencies": [
+        "@atlas/style"
+      ],
+      "files": [
+        {
+          "path": "components/rating-dots.tsx",
+          "type": "registry:component"
+        }
+      ]
+    },
+    {
+      "name": "tag-list",
+      "type": "registry:component",
+      "registryDependencies": [
+        "@atlas/style"
+      ],
+      "files": [
+        {
+          "path": "components/tag-list.tsx",
+          "type": "registry:component"
+        }
+      ]
+    },
+    {
+      "name": "pagination",
+      "type": "registry:component",
+      "registryDependencies": [
+        "@atlas/button"
+      ],
+      "files": [
+        {
+          "path": "components/pagination.tsx",
+          "type": "registry:component"
+        }
+      ]
+    },
+    {
+      "name": "breadcrumb",
+      "type": "registry:component",
+      "registryDependencies": [
+        "@atlas/style"
+      ],
+      "files": [
+        {
+          "path": "components/breadcrumb.tsx",
+          "type": "registry:component"
+        }
+      ]
+    },
+    {
+      "name": "empty-state",
+      "type": "registry:component",
+      "registryDependencies": [
+        "@atlas/button"
+      ],
+      "files": [
+        {
+          "path": "components/empty-state.tsx",
+          "type": "registry:component"
+        }
+      ]
+    },
+    {
+      "name": "toast",
+      "type": "registry:component",
+      "registryDependencies": [
+        "@atlas/style"
+      ],
+      "files": [
+        {
+          "path": "components/toast.tsx",
+          "type": "registry:component"
+        }
+      ]
+    },
+    {
+      "name": "banner",
+      "type": "registry:component",
+      "registryDependencies": [
+        "@atlas/style"
+      ],
+      "files": [
+        {
+          "path": "components/banner.tsx",
+          "type": "registry:component"
+        }
+      ]
+    },
+    {
+      "name": "consent-bar",
+      "type": "registry:component",
+      "registryDependencies": [
+        "@atlas/button"
+      ],
+      "files": [
+        {
+          "path": "components/consent-bar.tsx",
+          "type": "registry:component"
+        }
+      ]
+    },
+    {
+      "name": "freshness-stamp",
+      "type": "registry:component",
+      "registryDependencies": [
+        "@atlas/style"
+      ],
+      "files": [
+        {
+          "path": "components/freshness-stamp.tsx",
+          "type": "registry:component"
+        }
+      ]
+    },
+    {
+      "name": "copy-button",
+      "type": "registry:component",
+      "registryDependencies": [
+        "@atlas/style"
+      ],
+      "files": [
+        {
+          "path": "components/copy-button.tsx",
+          "type": "registry:component"
+        }
+      ]
+    },
+    {
+      "name": "code-block",
+      "type": "registry:component",
+      "registryDependencies": [
+        "@atlas/copy-button",
+        "@atlas/shiki-theme"
+      ],
+      "files": [
+        {
+          "path": "components/code-block.tsx",
+          "type": "registry:component"
+        }
+      ]
+    },
+    {
+      "name": "numbered-steps",
+      "type": "registry:component",
+      "registryDependencies": [
+        "@atlas/style"
+      ],
+      "files": [
+        {
+          "path": "components/numbered-steps.tsx",
+          "type": "registry:component"
+        }
+      ]
+    },
+    {
+      "name": "checklist",
+      "type": "registry:component",
+      "registryDependencies": [
+        "@atlas/checkbox"
+      ],
+      "files": [
+        {
+          "path": "components/checklist.tsx",
+          "type": "registry:component"
+        }
+      ]
+    },
+    {
+      "name": "definition-grid",
+      "type": "registry:component",
+      "registryDependencies": [
+        "@atlas/style"
+      ],
+      "files": [
+        {
+          "path": "components/definition-grid.tsx",
+          "type": "registry:component"
+        }
+      ]
+    },
+    {
+      "name": "key-facts",
+      "type": "registry:component",
+      "registryDependencies": [
+        "@atlas/style"
+      ],
+      "files": [
+        {
+          "path": "components/key-facts.tsx",
+          "type": "registry:component"
+        }
+      ]
+    },
+    {
+      "name": "stat-grid",
+      "type": "registry:component",
+      "registryDependencies": [
+        "@atlas/style"
+      ],
+      "files": [
+        {
+          "path": "components/stat-grid.tsx",
+          "type": "registry:component"
+        }
+      ]
+    },
+    {
+      "name": "faq-accordion",
+      "type": "registry:component",
+      "registryDependencies": [
+        "@atlas/style"
+      ],
+      "dependencies": [
+        "@radix-ui/react-accordion"
+      ],
+      "files": [
+        {
+          "path": "components/faq-accordion.tsx",
+          "type": "registry:component"
+        }
+      ]
+    },
+    {
+      "name": "search-box",
+      "type": "registry:component",
+      "registryDependencies": [
+        "@atlas/input",
+        "@atlas/button"
+      ],
+      "files": [
+        {
+          "path": "components/search-box.tsx",
+          "type": "registry:component"
+        }
+      ]
+    },
+    {
+      "name": "sort-select",
+      "type": "registry:component",
+      "registryDependencies": [
+        "@atlas/select"
+      ],
+      "files": [
+        {
+          "path": "components/sort-select.tsx",
+          "type": "registry:component"
+        }
+      ]
+    },
+    {
+      "name": "theme-toggle",
+      "type": "registry:component",
+      "registryDependencies": [
+        "@atlas/use-theme"
+      ],
+      "files": [
+        {
+          "path": "components/theme-toggle.tsx",
+          "type": "registry:component"
+        }
+      ]
+    },
+    {
+      "name": "toc",
+      "type": "registry:component",
+      "registryDependencies": [
+        "@atlas/style"
+      ],
+      "files": [
+        {
+          "path": "components/toc.tsx",
+          "type": "registry:component"
+        }
+      ]
+    }
+  ]
+}

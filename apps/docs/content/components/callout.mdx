@@ -1,0 +1,37 @@
+---
+title: Callout
+group: Feedback
+description: A short inline notice with a semantic tone. Never used for marketing.
+registry: callout
+---
+
+## Install
+
+```sh
+npx shadcn@latest add @atlas/callout
+```
+
+## Usage
+
+```tsx
+import { Callout } from "@/components/ui/callout"
+
+<Callout tone="note">Log out and back in, or <code>docker ps</code> will fail.</Callout>
+<Callout tone="success" label="verified" layout="stack">Install re-run against Ubuntu 24.04.</Callout>
+<Callout tone="danger" label="breaking" live onDismiss={() => setOpen(false)}>v2.0 drops SQLite.</Callout>
+```
+
+## Props
+
+| Prop | Type | Default | Notes |
+|---|---|---|---|
+| `tone` | `'note' | 'warning' | 'success' | 'danger' | 'neutral'` | 'note' | Picks border, background and label colour from the semantic token trio. |
+| `label` | `string` | tone | Uppercase eyebrow. One word. |
+| `layout` | `'row' | 'stack'` | 'row' | Stack when the body wraps past two lines. |
+| `live` | `boolean` | false | Static callouts are silent; live ones announce (danger → alert, else status). |
+| `onDismiss` | `() => void` | — | Adds a 36px close button; parent owns visibility. |
+
+## Accessibility
+
+- Label/body contrast ≥ 4.5:1 on the tinted background in both themes (CI check-contrast).
+- role is only set when live, so server-rendered notices don't fire announcements on load.

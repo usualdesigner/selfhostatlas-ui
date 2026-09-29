@@ -1,0 +1,25 @@
+---
+title: Installation
+group: Getting started
+---
+
+## 1. Register
+
+```json
+// components.json
+{ "registries": { "@atlas": "https://usualdesigner.github.io/selfhostatlas-ui/r/{name}.json" } }
+```
+
+## 2. Style
+
+```sh
+npx shadcn@latest add @atlas/style
+```
+
+Writes `app/globals.css` (tokens, `@theme inline` mapping, base layer) and installs IBM Plex via fontsource. Add `.dark` to `<html>` for dark mode; every token carries both values, so components never take a theme prop.
+
+## 3. Components
+
+```sh
+npx shadcn@latest add @atlas/button @atlas/callout @atlas/type-tile
+```

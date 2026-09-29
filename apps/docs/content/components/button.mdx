@@ -1,0 +1,37 @@
+---
+title: Button
+group: Actions
+description: shadcn button on atlas tokens. Press is a tone step, never a lift.
+registry: button
+---
+
+## Install
+
+```sh
+npx shadcn@latest add @atlas/button
+```
+
+## Usage
+
+```tsx
+import { Button } from "@/components/ui/button"
+
+<Button>Get started</Button>
+<Button variant="outline">Browse</Button>
+<Button variant="outline-accent">Check price at Hetzner</Button>
+<Button variant="ghost" size="icon" aria-label="Search">…</Button>
+```
+
+## Props
+
+| Prop | Type | Default | Notes |
+|---|---|---|---|
+| `variant` | `'default' | 'outline' | 'secondary' | 'ghost' | 'destructive' | 'link' | 'outline-accent'` | 'default' | outline-accent is the outlined accent for paid/external primary actions. |
+| `size` | `'default' | 'xs' | 'sm' | 'lg' | 'icon' | 'icon-xs' | 'icon-sm' | 'icon-lg'` | 'default' | default is 40px, lg/icon are 44px. |
+| `…props` | `ButtonPrimitive.Props` |  | Base UI button: render, disabled, nativeButton. |
+
+## Accessibility
+
+- Focus ring is the global 2px accent outline; the component never sets outline-none.
+- Icon-only buttons need aria-label.
+- Disabled = opacity 0.5 + pointer-events none; no hover or press state.

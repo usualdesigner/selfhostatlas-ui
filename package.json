@@ -1,0 +1,16 @@
+{
+  "name": "selfhostatlas-ui",
+  "private": true,
+  "license": "MIT",
+  "packageManager": "pnpm@9",
+  "scripts": {
+    "build:tokens": "pnpm -F @atlas-ui/tokens build",
+    "build:registry": "pnpm build:tokens && cp packages/tokens/dist/style.css packages/registry/styles/engineers-reference.css && cd packages/registry && npx shadcn@latest build --output ../../apps/docs/public/r",
+    "check:contrast": "tsx scripts/check-contrast.ts",
+    "build": "pnpm build:registry && pnpm -F docs build"
+  },
+  "devDependencies": {
+    "tsx": "^4.19.0",
+    "typescript": "^5.6.0"
+  }
+}

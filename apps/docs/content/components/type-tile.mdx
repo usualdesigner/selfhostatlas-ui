@@ -1,0 +1,39 @@
+---
+title: TypeTile
+group: Identity
+description: Logo or initials tile keyed to one of five marker hues. Lets the eye scan a mixed list by type.
+registry: type-tile
+---
+
+## Install
+
+```sh
+npx shadcn@latest add @atlas/type-tile
+```
+
+## Usage
+
+```tsx
+import { TypeTile } from "@/components/ui/type-tile"
+import { Scale } from "lucide-react"
+
+<TypeTile tone={3} label="Docmost" logoSrc="/logos/docmost.svg" />
+<TypeTile tone={3} label="Bugsink" />              {/* → "Bu" */}
+<TypeTile tone={1} label="Comparison" icon={<Scale strokeWidth={2} />} />
+```
+
+## Props
+
+| Prop | Type | Default | Notes |
+|---|---|---|---|
+| `tone` | `1 | 2 | 3 | 4 | 5 | 'accent'` | — | Marker hue (--marker-N + -bg/-border). |
+| `label` | `string` | — | Accessible name and initials source. |
+| `logoSrc` | `string` | — | When set the logo is the tile; initials are the fallback only. |
+| `icon` | `ReactNode` | — | Glyph instead of initials. |
+| `size` | `'sm' | 'md' | 'responsive'` | 'md' | 28 / 40 / 34→40px. |
+| `decorative` | `boolean` | true | false → role=img + aria-label when the tile is the row's only label. |
+
+## Accessibility
+
+- Decorative by default: the adjacent title carries the name.
+- Initials are two glyphs at ≥ 4.5:1 on the tinted tile in both themes.
